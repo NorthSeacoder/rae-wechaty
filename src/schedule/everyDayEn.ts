@@ -22,9 +22,9 @@ export default async (bot: Wechaty) => {
             }
             try {
                 // @ts-ignore
-                const {data: {body}}=await res.getCachedEveryEn({params: {date}})
+                const {data: {body},code}=await res.getCachedEveryEn({params: {date}})
                 console.log(body)
-                if(body){
+                if(code==0){
                     info=body
                 }else{
                     // @ts-ignore
