@@ -17,7 +17,18 @@ const api = {
     getEmployeeBirth:{
         url:nscBaseUrl+'/employee/birth',
         method:'get'
+    },
+    getCachedEveryEn:{
+        url:nscBaseUrl+'/caches',
+        method:'get'
+    },
+    
+    setCachedEveryEn:{
+        url:nscBaseUrl+'/caches',
+        method:'post'
     }
+
+
 
 };
 

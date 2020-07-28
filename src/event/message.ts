@@ -2,21 +2,21 @@ import { Message } from 'wechaty'
 import _ from 'lodash'
 
 import * as fund from '../message/fund'
-import * as employee from '../message/employee'
+import * as oa from '../message/oa'
 import test from '../message/test'
 
 const defaultRoute = { keyword: '', handle: fund.topFund }
 const routes = [
   { keyword: '基金', handle: fund.topFund },
   { keyword: 'test', handle: test },
-  { keyword: '生日', handle: employee.getEmployeeBirth },
+  { keyword: '生日', handle: oa.getEmployeeBirth },
+  { keyword: '日报', handle: oa.getWxTemplate },
   // { keyword: '文章', handle: recentArticle },
   defaultRoute
 ]
 
 async function reply (msg: Message, _data) {
   const data = _.concat(_data)
-  console.log({_data,data})
   for (const text of data) {
     if (text) {
       await msg.say(text)

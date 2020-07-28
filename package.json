@@ -9,7 +9,7 @@
         "dev": "nodemon index.ts",
         "getData": "ts-node src/common/scripts/fetch.ts",
         "docker:start": "docker build -t wechaty:rae . && bin/docker-run-typescript.sh",
-        "docker:clean":"docker rmi -f `docker images | grep  '<none>' | awk '{print $3}'`"
+        "docker:clean": "docker rmi -f `docker images | grep  '<none>' | awk '{print $3}'`"
     },
     "keywords": [],
     "author": "",
@@ -19,6 +19,7 @@
         "@types/cron": "^1.7.2",
         "cron": "^1.8.2",
         "lodash": "^4.17.19",
+        "moment": "^2.27.0",
         "npm-check-updates": "^7.0.1",
         "p-filter": "^2.1.0",
         "qrcode-terminal": "^0.12.0",
