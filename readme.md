@@ -1,7 +1,21 @@
-[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/chatie/wechaty)
-[![Wechaty开源激励计划](https://img.shields.io/badge/Wechaty-开源激励计划-green.svg)](https://github.com/juzibot/Welcome/wiki/Everything-about-Wechaty)
+---
+title: "Rae-oa系统微信群辅助机器人(rae-wechaty)"
+author: north-sea-coder
+date: "2020-07-28 21:24:00 +0800"
+categories: project
+tags:
+  - wechaty
+  - wechaty-puppet-padplus
+image: /assets/2020/rae-oa-wechaty/schecdule.png
+---
+> Author: [NorthSeacoder](https://github.com/NorthSeacoder)
+> Code: [rae-wechaty](https://github.com/NorthSeacoder/rae-wechaty)
 
-## 致谢
+## 背景
+
+之前公司web组组长有个微信机器人每周催我们交周报,私信发过去会自动更新到公司内部wiki上,一度惊为天人,后来看到公共号以及掘金上突然有好多人推荐wechaty,据说是6行代码完成一个微信聊天机器人,正好老婆那边想要个能辅助她工作的系统,就是这么巧~
+
+### 致谢
 
 感谢[wechaty](https://github.com/wechaty/wechaty)团队提供微信机器人SDK  
 感谢[句子互动](https://www.juzibot.com/)提供的iPad协议版token  
@@ -91,10 +105,11 @@ npm run docker:clean
 
 ## 目录结构
 
+
 - `bin`文件夹存放存放docker的运行脚本
 - `src`
   - `common` 存放公共配置及resource数据请求
   - `event` 机器人所有message交互处理
   - `message` 具体的处理逻辑函数
   - `schedule` 定时任务
-- `index.ts` 数据请求
+- `index.ts` 程序入口
