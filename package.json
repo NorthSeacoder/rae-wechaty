@@ -9,14 +9,17 @@
         "dev": "nodemon index.ts",
         "getData": "ts-node src/common/scripts/fetch.ts",
         "docker:start": "docker build -t wechaty:rae . && bin/docker-run-typescript.sh",
-        "docker:clean": "docker rmi -f `docker images | grep  '<none>' | awk '{print $3}'`"
+        "docker:clean": "docker rmi -f `docker images | grep  '<none>' | awk '{print $3}'`",
+        "commit": "git-cz"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@nsea/cz": "0.0.2",
         "@nsea/tools": "^1.0.0",
         "@types/cron": "^1.7.2",
+        "commitizen": "^4.2.1",
         "cron": "^1.8.2",
         "lodash": "^4.17.19",
         "moment": "^2.27.0",
@@ -28,8 +31,15 @@
         "wechaty-puppet-padplus": "^0.6.3"
     },
     "devDependencies": {
+        "@nsea/cz": "0.0.2",
+        "commitizen": "^4.2.1",
         "axios": "^0.19.2",
         "nodemon": "^2.0.4",
         "typescript": "^3.9.6"
-    }
+    },
+    "config": {
+        "commitizen": {
+          "path": "./node_modules/@nsea/cz"
+        }
+      }
 }
