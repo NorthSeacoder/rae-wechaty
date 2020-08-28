@@ -39,7 +39,7 @@
     },
     "config": {
         "commitizen": {
-          "path": "./node_modules/@nsea/cz"
+            "path": "./node_modules/@nsea/cz"
         }
-      }
+    }
 }
