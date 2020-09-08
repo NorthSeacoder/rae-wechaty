@@ -1,9 +1,10 @@
 import { Message } from 'wechaty'
 import _ from 'lodash'
 
-import * as fund from '../message/fund'
-import * as oa from '../message/oa'
-import test from '../message/test'
+import * as fund from '../handler/fund'
+import * as oa from '../handler/oa'
+import test from '../handler/test'
+import {getEveryDayEn} from '../handler/everyDayEn'
 
 const defaultRoute = { keyword: '', handle: fund.topFund }
 const routes = [
@@ -11,11 +12,12 @@ const routes = [
   { keyword: 'test', handle: test },
   { keyword: '生日', handle: oa.getEmployeeBirth },
   { keyword: '日报', handle: oa.getWxTemplate },
+  { keyword: '每日英语', handle: getEveryDayEn },
   // { keyword: '文章', handle: recentArticle },
   defaultRoute
 ]
 
-async function reply (msg: Message, _data) {
+async function reply (msg: Message, _data:any) {
   const data = _.concat(_data)
   for (const text of data) {
     if (text) {

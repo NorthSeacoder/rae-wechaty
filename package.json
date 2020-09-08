@@ -2,11 +2,11 @@
     "name": "rae",
     "version": "1.0.0",
     "description": "",
-    "main": "app.ts",
+    "main": "index.ts",
     "scripts": {
-        "start": "ts-node app.ts",
+        "start": "ts-node index.ts",
         "ncu": "ncu",
-        "dev": "nodemon app.ts",
+        "dev": "nodemon index.ts",
         "getData": "ts-node src/common/scripts/fetch.ts",
         "docker:start": "docker build -t wechaty:rae . && bin/docker-run-typescript.sh",
         "docker:clean": "docker rmi -f `docker images | grep  '<none>' | awk '{print $3}'`",
@@ -17,8 +17,9 @@
     "license": "ISC",
     "dependencies": {
         "@nsea/cz": "0.0.2",
-        "@nsea/tools": "^1.0.0",
+        "@nsea/tools": "1.0.6",
         "@types/cron": "^1.7.2",
+        "@types/lodash": "^4.14.161",
         "commitizen": "^4.2.1",
         "cron": "^1.8.2",
         "koa": "^2.13.0",
@@ -32,7 +33,10 @@
         "qrcode-terminal": "^0.12.0",
         "ts-node": "^8.10.2",
         "wechaty": "^0.40.10",
-        "wechaty-puppet-padplus": "^0.6.3"
+        "wechaty-plugin-contrib": "^0.14.15",
+        "wechaty-plugin-yd": "^1.1.2",
+        "wechaty-puppet-padplus": "^0.6.3",
+        "wechaty-weixin-openai": "^0.2.10"
     },
     "devDependencies": {
         "@nsea/cz": "0.0.2",
